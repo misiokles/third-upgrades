@@ -1,0 +1,137 @@
+{
+	"tumDarknessDragon":
+	{
+		"name" :
+		{
+			"plural" : "Darkness Dragons",
+			"singular" : "Darkness Dragon"
+		},
+		"advMapAmount" : 
+		{
+			"max" : 6,
+			"min" : 3
+		},
+		"faction" : "dungeon",
+		"attack" : 33,
+		"defense" : 33,
+		"cost" :
+		{
+			"gold" : 8000,
+			"sulfur" : 3
+		},
+		"damage" :
+		{
+			"max" : 75,
+			"min" : 60
+		},
+		"growth" : 1,
+		"hitPoints" : 600,
+		"level" : 7,
+		"speed" : 15,
+		"fightValue" : 26000,
+		"aiValue" : 20000,
+		"graphics" :
+		{
+			"animation" : 	"creatures/dungeon/battle/CR155",
+			"map" : 		"creatures/dungeon/map/AVWCR155",
+			"iconSmall" : 	"creatures/dungeon/iconsSmall/CPrS155C",
+			"iconLarge" : 	"creatures/dungeon/iconsBig/CPrL155Z",
+			"timeBetweenFidgets" : 1,
+			"animationTime" :
+			{
+				"walk" : 1.00,
+				"idle" : 10.00,
+				"attack" : 1.00
+			}
+		},
+		"doubleWide" : true,
+		"sound" :
+		{
+			"attack": "BKDRATTK.wav",
+			"defend": "BKDRDFND.wav",
+			"killed": "BKDRKILL.wav",
+			"move": "BKDRMOVE.wav",
+			"wince": "BKDRWNCE.wav"
+		},
+		"abilities":
+		{	
+			"canFly" : 
+			{
+				"type" : "FLYING"
+			},
+			"dragon" :
+			{
+				"type" : "DRAGON_NATURE"
+			},
+			"fireBreath" :
+			{
+				"type" : "TWO_HEX_ATTACK_BREATH"
+			},
+			"spellImmunity" :
+			{
+				"type" : "LEVEL_SPELL_IMMUNITY",
+				"val" : 5
+			},
+			"fearless" :
+			{
+				"type" : "FEARLESS"
+			},
+			"fear" :
+			{
+				"type" : "FEAR"
+			},
+			"strikeAndReturn" : 
+			{
+				"type" : "RETURN_AFTER_STRIKE",
+				"val" : 0,
+				"valueType" : "BASE_NUMBER"
+			},
+			"hateLordOfThunder" :
+			{
+				"type" : "HATE",
+				"subtype" : "creature.tumLordOfThunder", //co z innymi? gdzie darkness?
+				"val" : 5
+			},
+			"king1" :
+			{
+				"type" : "KING",
+				"val" : 0,
+				"valueType" : "ADDITIVE_VALUE"
+			}
+		},
+		"stackExperience" :
+		[
+			//{ // powoduje crasch
+			//	"bonus" :
+			//	{
+			//		"type" : "SPELL_BEFORE_ATTACK",
+			//		"subtype" : 59, // berserk
+			//		"addInfo" : 3
+			//	},
+			//	"values" : [3, 6, 9, 12, 15, 18, 21, 24, 27, 30]
+			//},
+			{
+				"bonus" :
+				{
+					"type" : "BLOCKS_RETALIATION"
+				},
+				"values" : [false, false, false, false, false, false, true, true, true, true]
+			},
+			{
+			 	"bonus" :
+			 	{
+			 		"type" : "HATE",
+			 		"subtype" : "creature.tumLordOfThunder"
+			 	},
+			 	"values" : [6, 7, 8, 9, 10, 12, 14, 16, 18, 20]
+			},
+			{
+				"bonus" :
+				{
+					"type" : "STACKS_SPEED"
+				},
+				"values" : [0, 0, 0, 1, 1, 2, 2, 2, 2, 3]
+			}
+		]
+	}
+}	

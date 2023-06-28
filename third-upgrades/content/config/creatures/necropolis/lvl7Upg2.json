@@ -1,0 +1,159 @@
+{
+	"tumBloodDragon":
+	{
+		"name" : 
+		{
+			"plural" : "Blood Dragons",
+			"singular" : "Blood Dragon"
+		},
+		"advMapAmount" : 
+		{
+			"max" : 6,
+			"min" : 3
+		},
+		"faction" : "necropolis",
+		"aiValue" : 15750,
+		"attack" : 25,
+		"cost" :
+		{
+			"gold" : 6000,
+			"mercury" : 2
+		},
+		"damage" :
+		{
+			"max" : 75,
+			"min" : 38
+		},
+		"defense" : 23,
+		"fightValue" : 17750,
+		"graphics" :
+		{
+			"animation": 	"creatures/necropolis/battle/CR154",
+			"map" : 		"creatures/necropolis/map/AVWCR154",
+			"iconSmall" : 	"creatures/necropolis/iconsSmall/CPrS154C",
+			"iconLarge" : 	"creatures/necropolis/iconsBig/CPrL154Z",
+			"timeBetweenFidgets" : 1,
+			"animationTime" :
+			{
+				"walk" : 1.00,
+				"idle" : 10.00,
+				"attack" : 1.00
+			}
+		},
+		"growth" : 1,
+		"hitPoints" : 400,
+		"speed" : 14,
+		"level" : 7,
+		"doubleWide" : true,
+		"sound" :
+		{
+			"attack": "GHDRATTK.wav",
+			"defend": "GHDRDFND.wav",
+			"killed": "GHDRKILL.wav",
+			"move": "GHDRMOVE.wav",
+			"wince": "GHDRWNCE.wav"
+		},
+		"abilities":
+		{
+			"drainsLife" : 
+			{
+				"type" : "LIFE_DRAIN",
+				"val" : 40
+			},
+			"canFly" : 
+			{
+				"type" : "FLYING"
+			},
+			"undead" :
+			{
+				"type" : "UNDEAD"
+			},
+			"dragon" :
+			{
+				"type" : "DRAGON_NATURE"
+			},
+			"decreaseMorale" :
+			{
+				"propagator": "BATTLE_WIDE",
+				"propagationUpdater" : "BONUS_OWNER_UPDATER",
+				"limiters" : [ "OPPOSITE_SIDE" ],
+				"type" : "MORALE", 
+				"val" : -1,
+				"stacking" : "Undead Dragons"
+			},
+			"age" :
+			{
+				"type" : "SPELL_AFTER_ATTACK",
+				"subtype" : "spell.age",
+				"val" : 40
+			},
+			"fearless" :
+			{
+				"type" : "FEARLESS"
+			},
+			"king1" :
+			{
+				"type" : "KING",
+				"val" : 0,
+				"valueType" : "ADDITIVE_VALUE"
+			}
+		},
+		"stackExperience" :
+		[
+			{
+				"bonus" :
+				{
+					"type" : "SPELL_AFTER_ATTACK",
+					"subtype" : 75 // age
+				},
+				"values" : [8, 16, 24, 32, 40, 48, 56, 64, 72, 80]
+			},
+			{
+				"bonus" :
+				{
+					"type" : "FIRE_IMMUNITY",
+					"subtype" : 1 
+				},
+				"values" : [false, false,  true, true, true, true, true, true, true, true]
+			},
+			{
+				"bonus" :
+				{
+					"type" : "AIR_IMMUNITY",
+					"subtype" : 1 
+				},
+				"values" : [false, false, false, false, false, false, true, true, true, true]
+			},
+			{
+				"bonus" :
+				{
+					"type" : "EARTH_IMMUNITY",
+					"subtype" : 1 
+				},
+				"values" : [false, false, false, false, false, false, false, false, true, true]
+			},
+			{
+				"bonus" :
+				{
+					"type" : "WATER_IMMUNITY",
+					"subtype" : 1 
+				},
+				"values" : [false, false, false, false, true, true, true, true, true, true]
+			},
+			{
+				"bonus" :
+				{
+					"type" : "FEAR"
+				},
+				"values" : [false, false, false, false, true, true, true, true, true, true]
+			},
+			{
+				"bonus" :
+				{
+					"type" : "STACKS_SPEED"
+				},
+				"values" : [0, 0, 1, 1, 1, 2, 2, 2, 3, 3]
+			}
+		]
+	}
+}

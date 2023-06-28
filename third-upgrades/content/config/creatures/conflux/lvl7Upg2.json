@@ -1,0 +1,145 @@
+{
+	"tumSacredPhoenix":
+	{
+		"name" :
+		{
+			"plural" : "Sacred Phoenixes",
+			"singular" : "Sacred Phoenix"
+		},
+		"advMapAmount" : 
+		{
+			"max" : 6,
+			"min" : 3
+		},
+		"faction" : "conflux",
+		"aiValue" : 17750,
+		"attack" : 28,
+		"cost" :
+		{
+			"gold" : 5000,
+			"mercury" : 3
+		},
+		"damage" :
+		{
+			"max" : 60,
+			"min" : 45
+		},
+		"defense" : 28,
+		"fightValue" : 23000,
+		"graphics" :
+		{
+			"animation" : 	"creatures/conflux/battle/CR158",
+			"map" : 		"creatures/conflux/map/AVWCR158",
+			"iconSmall" : 	"creatures/conflux/iconsSmall/CPrS158E",
+			"iconLarge" : 	"creatures/conflux/iconsBig/CPrL158Z",
+			"timeBetweenFidgets" : 1,
+			"animationTime" :
+			{
+				"walk" : 1.00,
+				"idle" : 10.00,
+				"attack" : 1.00
+			}
+		},
+		"growth" : 1,
+		"horde" : 1,
+		"hitPoints" : 400,
+		"doubleWide" : true,
+		"level" : 7,
+		"sound" :
+		{
+			"attack": "PHOEATTK.wav",
+			"defend": "PHOEDFND.wav",
+			"killed": "PHOEKILL.wav",
+			"move": "PHOEMOVE.wav",
+			"wince": "PHOEWNCE.wav"
+		},
+		"speed" : 21,
+		"abilities":
+		{
+			"canFly" : 
+			{
+				"type" : "FLYING"
+			},
+			"fireBreath" :
+			{
+				"type" : "TWO_HEX_ATTACK_BREATH"
+			},
+			"rebirthOnce" :
+			{
+				"type" : "CASTS",
+				"val" : 3
+			},
+			"immuneToFire" :
+			{
+				"type" : "FIRE_IMMUNITY",
+				"subtype" : 0 //this IS important
+			},
+			"rebirth" : 
+			{
+				"type" : "REBIRTH",
+				"val" : 100
+			},
+			"fireShield" :
+			{
+				"type" : "FIRE_SHIELD",
+				"subtype" : 100,
+				"val" : 100
+			},
+			"spellSlayer" :
+			{
+				"type" : "ENCHANTED",
+				"subtype" : "spell.slayer",
+				"val" : 3,
+				"addInfo" : 100
+			},
+			"spellpower" :
+			{
+				"type" : "CREATURE_SPELL_POWER",
+				"val" : 100
+			},
+			"king1" :
+			{
+				"type" : "KING", "val" : 1, "valueType" : "ADDITIVE_VALUE"
+			}
+		},
+		"stackExperience" :
+		[
+			{
+				"bonus" :
+				{
+					"type" : "ADDITIONAL_RETALIATION"
+				},
+				"values" : [0, 0, 0, 0, 1, 1, 1, 1, 1, 2]
+			},
+			{
+				"bonus" :
+				{
+					"type" : "CASTS"
+				},
+				"values" : [0, 0, 1, 1, 1, 1, 2, 2, 2, 3]
+			},
+			{
+				"bonus" :
+				{
+					"type" : "SPELL_IMMUNITY",
+					"subtype" : 62 // blind
+				},
+				"values" : [false, false, false, false, false, false, false, true, true, true]
+			},
+			{
+				"bonus" :
+				{
+					"type" : "FEARLESS"
+				},
+				"values" : [false, false, false, false, true, true, true, true, true, true]
+			},
+			{
+				"bonus" :
+				{
+					"type" : "STACKS_SPEED"
+				},
+				"values" : [0, 0, 0, 1, 1, 2, 2, 2, 2, 3]
+			}
+		]
+	}
+}

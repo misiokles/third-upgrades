@@ -1,0 +1,126 @@
+{
+	"tumGhostBehemoth" :
+	{
+		"name" : 
+		{
+			"plural" : "Ghost Behemoths",
+			"singular" : "Ghost Behemoth"
+		},
+		"advMapAmount" : 
+		{
+			"max" : 6,
+			"min" : 3
+		},
+		"faction" : "stronghold",
+		"aiValue" : 16250,
+		"attack" : 25,
+		"cost" :
+		{
+			"gold" : 6000,
+			"crystal" : 2
+		},
+		"damage" :
+		{
+			"max" : 75,
+			"min" : 45
+		},
+		"defense" : 25,
+		"fightValue" : 18250,
+		"graphics" :
+		{
+			"animation" : "creatures/stronghold/battle/CR156",
+			"map" : 	  "creatures/stronghold/map/AVWCR156",
+			"iconSmall" : "creatures/stronghold/iconsSmall/CPrS156S",
+			"iconLarge" : "creatures/stronghold/iconsBig/CPrL156Z",
+			"timeBetweenFidgets" : 1,
+			"animationTime" :
+			{
+				"walk" : 1.00,
+				"idle" : 10.00,
+				"attack" : 1.00
+			}
+		},
+		"growth" : 1,
+		"hitPoints" : 600,
+		"level" : 7,
+		"doubleWide" : true,
+		"sound" :
+		{
+			"attack": "BMTHATTK.wav",
+			"defend": "BMTHDFND.wav",
+			"killed": "BMTHKILL.wav",
+			"move": "BMTHMOVE.wav",
+			"wince": "BMTHWNCE.wav"
+		},
+		"speed" : 11,
+		
+		"abilities" :
+		{
+			"canFly" : 
+			{
+				"type" : "FLYING"
+			},
+			"selfMorale" :
+			{
+				"type" : "LUCK", //dopisać coś ze stacking behemoth
+				"val" : 1,
+				"valueType" : "INDEPENDENT_MAX"
+			},
+			"extraRetaliation" :
+			{
+				"type" : "ADDITIONAL_RETALIATION",
+				"val" : 2
+			},
+			"reduceDefence" :
+			{
+				"type" : "ENEMY_DEFENCE_REDUCTION",
+				"val" : 100
+			},
+			"king1" :
+			{
+				"type" : "KING",
+				"val" : 0,
+				"valueType" : "ADDITIVE_VALUE"
+			}
+		},	
+		"stackExperience" :
+		[
+			{
+				"bonus" :
+				{
+					"type" : "ADDITIONAL_ATTACK"
+				},
+				"values" : [false, false, false, false, false, false, true, true, true, true]
+			},
+			{
+				"bonus" :
+				{
+					"type" : "DIRECT_DAMAGE_IMMUNITY"
+				},
+				"values" : [false, false, false, false, false, false, true, true, true, true]
+			},
+			{
+				"bonus" :
+				{
+					"type" : "SPELL_IMMUNITY",
+					"subtype" : 62 // blind
+				},
+				"values" : [false, false, false, false, false, false, false, true, true, true]
+			},
+			{
+				"bonus" :
+				{
+					"type" : "FEAR"
+				},
+				"values" : [false, false, false, false, true, true, true, true, true, true]
+			},
+			{
+				"bonus" :
+				{
+					"type" : "STACKS_SPEED"
+				},
+				"values" : [0, 0, 2, 3, 3, 4, 4, 4, 4, 5]
+			}
+		]
+	}
+}

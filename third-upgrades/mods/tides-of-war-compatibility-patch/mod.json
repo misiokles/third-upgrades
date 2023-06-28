@@ -1,0 +1,30 @@
+{
+	"author" : "avatar",
+	"contact" : "",
+	"description" : "Tides of War compatibility patch",
+	"licenseName" : "Creative Commons Attribution-ShareAlike",
+	"licenseURL" : "http://creativecommons.org/licenses/by-sa/4.0/deed",
+	"modType" : "Mechanics",
+	"name" : "Tides of War patch",
+	"version" : "28.06.2023",
+	"conflicts" :
+	[
+		"hota.hota balance"
+	],
+	"depends" :
+	[
+		"tides-of-war"
+	],
+	"factions" :
+	[
+		"config/necropolis/factions",
+		"config/fortress/factions",
+		"config/rampart/factions",
+		"config/inferno/factions",
+		"config/tower/factions",
+		"config/conflux/factions",
+		"config/castle/factions",
+		"config/dungeon/factions",
+		"config/stronghold/factions"
+	]
+}

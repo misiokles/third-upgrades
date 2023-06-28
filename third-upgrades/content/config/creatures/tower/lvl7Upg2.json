@@ -1,0 +1,147 @@
+{
+	"tumLordOfThunder":
+	{
+		"name" :
+		{
+			"plural" : "Lords Of Thunder",
+			"singular" : "Lord Of Thunder"
+		},
+		"advMapAmount" : 
+		{
+			"max" : 6,
+			"min" : 3
+		},
+		"faction" : "tower",
+		"attack" : 32,
+		"defense" : 32,
+		"cost" :
+		{
+			"gold" : 10000,
+			"gems" : 3
+		},
+		"damage" :
+		{
+			"max" : 75,
+			"min" : 60
+		},
+		"growth" : 1,
+		"hitPoints" : 600,
+		"level" : 8,
+		"shots" : 24,
+		"speed" : 12,
+		"fightValue" : 22500, //unknown
+		"aiValue" : 15000, //unknown
+		"graphics" :
+		{
+			"animation" : 	"creatures/tower/battle/CR152",
+			"map" : 		"creatures/tower/map/AVWCR152",
+			"iconSmall" : 	"creatures/tower/iconsSmall/CPrs152T",
+			"iconLarge" : 	"creatures/tower/iconsBig/CPrL152Z",
+			"timeBetweenFidgets" : 1,
+			"animationTime" :
+			{
+				"walk" : 1.00,
+				"idle" : 10.00,
+				"attack" : 1.00
+			},
+			"missile" :
+			{
+				"projectile": "CPRGTIX.DEF",
+				"attackClimaxFrame" : 6,
+				"offset" :
+				{
+					"upperX" : 10,
+					"upperY" : -70,
+					"middleX" : 10,
+					"middleY" : -70,
+					"lowerX" : 10,
+					"lowerY" : -70
+				},
+				"frameAngles" : [90, 72, 45, 27, 0, -27, -45, -72, -90, 0, 0, 0]
+			}
+		},
+
+		"doubleWide" : false,
+		"sound" :
+		{
+			"attack": "GTITATTK.wav",
+			"defend": "GTITDFND.wav",
+			"killed": "GTITKILL.wav",
+			"move": "GTITMOVE.wav",
+			"shoot": "GTITSHOT.wav",
+			"wince": "GTITWNCE.wav"
+		},
+		"abilities":
+		{
+			"canShoot" :
+			{
+				"type" : "SHOOTER"
+			},
+			"additionalAttack" :
+			{
+				"type" : "ADDITIONAL_ATTACK",
+				"val" : 1
+			},
+			"thunderStrength" :
+			{
+				"type" : "SPECIFIC_SPELL_POWER",
+				"subtype" : "spell.thunderbolt",
+				"val" : 10
+			},
+			"thunderOnAttack" :
+			{
+				"type" : "SPELL_AFTER_ATTACK",
+				"subtype" : "spell.thunderbolt",
+				"val" : 20,
+				"addInfo" : [0, 1] 
+			},
+			"castsAirShield" :
+			{
+				"type" : "ENCHANTED",
+				"subtype" : "spell.airShield",
+				"val" : 3,
+				"addInfo" : 1
+			},
+			"noPenalty" : 
+			{
+				"type" : "NO_WALL_PENALTY"
+			},
+			"noDistancePenalty" :
+			{
+				"type" : "NO_DISTANCE_PENALTY"
+			},
+			"king3" :
+			{
+				"type" : "KING", "val" : 3, "valueType" : "ADDITIVE_VALUE"
+			},
+			"fearless" :
+			{
+				"type" : "FEARLESS"
+			}
+		},	
+		"stackExperience" :
+		[
+			{
+				"bonus" :
+				{
+					"type" : "DOUBLE_DAMAGE_CHANCE"
+				},
+				"values" : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+			},
+			{
+				"bonus" :
+				{
+					"type" : "MAGIC_RESISTANCE"
+				},
+				"values" : [0, 0, 0, 0, 0, 10, 20, 30, 40, 50]
+			},
+			{
+				"bonus" :
+				{
+					"type" : "STACKS_SPEED"
+				},
+				"values" : [0, 0, 0, 1, 1, 2, 2, 2, 2, 3]
+			}
+		]
+	}
+}

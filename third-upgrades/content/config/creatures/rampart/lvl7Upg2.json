@@ -1,0 +1,133 @@
+{
+	"tumDiamondDragon":
+	{
+		"name" : 
+		{
+			"plural" : "Diamond Dragons",
+			"singular" : "Diamond Dragon"
+		},
+		"advMapAmount" : 
+		{
+			"max" : 6,
+			"min" : 3
+		},
+		"faction" : "rampart",
+		"attack" : 36,
+		"defense" : 36,
+		"damage" :
+		{
+			"max" : 75,
+			"min" : 60
+		},
+		"growth" : 1,
+		"hitPoints" : 500,
+		"level" : 7,
+		"speed" : 16,
+		"cost" :
+		{
+			"gold" : 8000,
+			"crystal" : 3
+		},
+		"fightValue" : 37500,
+		"aiValue" : 51000,
+		"graphics" :
+		{
+			"animation" : "creatures/rampart/battle/CR151",
+			"map" : "creatures/rampart/map/AVWCR151",
+			"iconSmall" : "creatures/rampart/iconsSmall/CPrS151C",
+			"iconLarge" : "creatures/rampart/iconsBig/CPrL151Z",
+			"timeBetweenFidgets" : 1,
+			"animationTime" :
+			{
+				"walk" : 1.00,
+				"idle" : 10.00,
+				"attack" : 1.00
+			}
+		},
+		"doubleWide" : true,
+		"sound" :
+		{
+			"attack": "GODRATTK.wav",
+			"defend": "GODRDFND.wav",
+			"killed": "GODRKILL.wav",
+			"move": "GODRMOVE.wav",
+			"wince": "GODRWNCE.wav"
+		},
+		"abilities" :
+		{
+			"dragon" :
+			{
+				"type" : "DRAGON_NATURE"
+			},
+			"fireBreath" :
+			{
+				"type" : "TWO_HEX_ATTACK_BREATH"
+			},
+			"spellImmunity" :
+			{
+				"type" : "LEVEL_SPELL_IMMUNITY",
+				"val" : 5
+			},
+			"fearless" :
+			{
+				"type" : "FEARLESS"
+			},
+			"crystals" :
+			{
+				"type" : "GENERATE_RESOURCE",
+				"subtype" : "resource.crystal",
+				"val" : 1,
+				"propagator" : "HERO"
+			},
+			"canFly" : 
+			{
+				"type" : "FLYING"
+			},
+			"king1" :
+			{
+				"type" : "KING",
+				"val" : 0,
+				"valueType" : "ADDITIVE_VALUE"
+			},
+			"blinds" :
+			{
+				"type" : "SPELL_AFTER_ATTACK",
+				"subtype" : "spell.blind",
+				"val" : 20
+			}
+		},
+		"stackExperience" :
+		[
+			{
+				"bonus" :
+				{
+					"type" : "RECEPTIVE"
+				},
+				"values" : [false, false, false, false, false, false, false, false, true, true]
+			},
+			{
+				"bonus" :
+				{
+				"type" : "SPELL_RESISTANCE_AURA",
+				"subtype" : 20
+				},
+				"values" : [false, false, false, false, false, false, true, true, true, true]
+			},
+			{
+				"bonus" :
+				{
+					"type" : "HATE",
+					"subtype" : "creature.tumBloodDragon"
+				},
+				"values" : [5, 10, 15, 20, 25, 30, 35, 40, 45, 50]
+			},
+			{
+				"bonus" :
+				{
+					"type" : "STACKS_SPEED"
+				},
+				"values" : [0, 0, 0, 1, 1, 2, 2, 2, 2, 3]
+			}
+		]
+	}
+}
